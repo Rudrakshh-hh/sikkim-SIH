@@ -356,6 +356,105 @@ body {
 .close:hover {
   color: #000;
 }
+.fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Calendar styling */
+    /* .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .calendar div {
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .calendar .festival {
+      background: #d97706;
+      color: white;
+      font-weight: bold;
+    }
+    .calendar .festival:hover {
+      background: #b45309;
+    }
+    .calendar .day {
+      background: #f3f4f6;
+    } */
+
+  .festival-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  padding-left: 30px;
+  border-left: 3px solid #00695c;
+}
+
+.festival-item {
+  margin: 20px 0;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.festival-item:hover {
+  transform: scale(1.03);
+  background: #f1fdfb;
+}
+
+.festival-item::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  background: #00695c;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.festival-date {
+  font-weight: bold;
+  color: #004d40;
+  font-size: 1.1rem;
+}
+
+.festival-name {
+  font-size: 1rem;
+  color: #333;
+}
+
+.festival-details {
+  margin-top: 25px;
+  padding: 15px;
+  background: #fff8dc;
+  border-left: 4px solid #d97706;
+  border-radius: 8px;
+  display: none;
+  text-align: left;
+  line-height: 1.5;
+}
+
 
 /* Animation */
 @keyframes zoomIn {
